@@ -17,6 +17,10 @@
     background-color: var(--bgColor);
     height: 100vh;
     padding-top: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title{
