@@ -65,10 +65,10 @@
     border-radius: 10px;
 }
 
-.tile:hover{
+/* .tile:hover{
     border-width: 3px;
     border-color: var(--borderColorOnHover);
-}
+} */
 
 .playerX{
     color: var(--playerX_Color);
