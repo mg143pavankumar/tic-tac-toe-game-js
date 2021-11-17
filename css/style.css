@@ -7,7 +7,8 @@
 :root{
     --bgColor: #121818;
     --textColor: #fff;
-    --borderColor: #fff;
+    --borderColor: rgb(121, 118, 118);
+    --borderColorOnHover: rgb(211, 206, 206);
     --playerX_Color: #09C372;
     --playerO_Color: #498AF8;
 }
@@ -22,7 +23,7 @@
     color: var(--textColor);
     text-align: center;
     font-size: 40px;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .display{
@@ -31,23 +32,25 @@
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
-
 }
 
-#hide{
+.hide{
     display: none;
 }
 
 .container{
+    max-width: 350px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
-    max-width: 300px;
+    row-gap: 5px;
+    column-gap: 5px;
+
 }
 
 .tile{
-    border: 1px solid var(--borderColor);
+    border: 3px solid var(--borderColor);
     min-height: 100px;
     min-width: 100px;
     display: flex;
@@ -55,15 +58,22 @@
     align-items: center;
     font-size: 50px;
     cursor: pointer;
+    border-radius: 10px;
+}
 
+.tile:hover{
+    border-width: 3px;
+    border-color: var(--borderColorOnHover);
 }
 
 .playerX{
     color: var(--playerX_Color);
+    border-color: var(--playerX_Color);
 }
 
 .playerO{
     color: var(--playerO_Color);
+    border-color: var(--playerO_Color);
 }
 
 .controls{
@@ -79,7 +89,7 @@
     font-weight: 500;
     font-size: 15px;
     cursor: pointer;
-    background-color: red;
+    background-color: rgb(211, 7, 7);
     border: none;
     outline: none;
     border-radius: 8px;
@@ -89,4 +99,4 @@
 
 #reset:hover{
     background-color: rgba(255, 0, 0, 0.692);
-}
+    transform: scale(1.05);}
